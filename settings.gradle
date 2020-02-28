@@ -1,0 +1,2 @@
+include ':app', ':snappystory'
+rootProject.name='Test Application'
