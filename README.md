@@ -24,7 +24,7 @@ repositories {
 
 ```groovy
 dependencies {
-  // [To Be Added Soon]
+    implementation 'com.betacode:snappystory:0.1'
 }
 ```
 
@@ -33,7 +33,7 @@ To start using SnappyStory
 ```kotlin
         snap_view.load(
             arrayListOf(
-                StoryModel(R.drawable.badge_crown, 5),
+                StoryModel(R.drawable.badge_crown, 5), // 5 in seconds
                 StoryModel(R.drawable.badge_reward, 5),
                 StoryModel(R.drawable.bg_no_item_cactus, 5),
                 StoryModel(R.drawable.bg_no_item_city, 5),
@@ -58,7 +58,7 @@ To start using SnappyStory
 
 ```
 
-In you Layout XML
+In your Layout XML
 
 ```xml
 <com.betacode.free.snappystory.view.SnappyStoryView 
