@@ -19,7 +19,6 @@ class MainActivity : AppCompatActivity() {
             Comment("Deep", "Hi! There!"),
             Comment("Tolat", "Hey")
         )
-
         snap_view.load(
             arrayListOf(
                 StoryModel(
