@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <variable
+            name="commentData"
+            type="com.betacode.free.snappystory.model.Comment" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="@dimen/_12dp"
+        android:paddingTop="@dimen/_8dp"
+        android:paddingEnd="@dimen/_12dp"
+        android:paddingBottom="@dimen/_8dp">
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@{commentData.header}"
+            android:textColor="#FFF"
+            android:textSize="@dimen/_14sp"
+            tools:text="Deep Tolat" />
+
+        <TextView
+            android:id="@+id/comment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/_4dp"
+            android:text="@{commentData.comment}"
+            android:textColor="#FFF"
+            android:textSize="@dimen/_10sp"
+            tools:text="Deep Tolat" />
+
+    </LinearLayout>
+</layout>

@@ -20,7 +20,7 @@
 
     </LinearLayout>
 
-    <View
+    <ImageView
         android:id="@+id/left_side"
         android:layout_width="@dimen/_72dp"
         android:layout_height="match_parent"
@@ -28,7 +28,7 @@
         android:layout_alignParentLeft="true"
         android:elevation="@dimen/_2dp" />
 
-    <View
+    <ImageView
         android:id="@+id/right_side"
         android:layout_width="@dimen/_72dp"
         android:layout_height="match_parent"
@@ -51,5 +51,34 @@
             android:scaleType="center" />
 
     </androidx.cardview.widget.CardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/comment_recycler"
+        android:layoutAnimation="@anim/anim_fade_in"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/comments"
+        android:clipToPadding="false"
+        android:elevation="@dimen/_10dp"
+        android:scrollbars="vertical"
+        android:scrollingCache="true"
+        android:visibility="gone" />
+
+    <TextView
+        android:id="@+id/comments"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/view_soft_gradient"
+        android:elevation="@dimen/_10dp"
+        android:gravity="center"
+        android:padding="@dimen/_16dp"
+        android:scrollbars="vertical"
+        android:scrollingCache="true"
+        android:text="Show Comments"
+        android:textColor="#FFF"
+        android:textSize="@dimen/_14sp"
+        android:visibility="visible" />
+
 
 </RelativeLayout>
