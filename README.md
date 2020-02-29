@@ -84,6 +84,8 @@ In your Layout XML
 
 * **Why is it not working for me?** - dependency issue maybe, create an issue if it doesn't work
 * **Will it support other types of media?** - Yes, all kinds but that will take time
+* **There is a BUG!!** - [HERE](https://github.com/betaCode95/SnappyStory/blob/master/.github/ISSUE_TEMPLATE/bug_report.md)
+* **I have a FEATURE IDEA/REQUEST!!** [HERE](https://github.com/betaCode95/SnappyStory/blob/master/.github/ISSUE_TEMPLATE/feature_request.md)
 
 ## Contributing 🤝
 
