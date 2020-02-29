@@ -16,7 +16,7 @@ A module that helps in modularizing Snapchat's story-like UI
 
 ## Getting Started 👣
 
-SnappyStory is not yet distributed locally. Will be uploaded on Bintray
+SnappyStory is distributed through [Bintray](https://bintray.com/beta/#/deeptolat/snappystory?tab=packages)
 
 ```groovy
 repositories {
