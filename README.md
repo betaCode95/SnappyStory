@@ -6,6 +6,8 @@
 
 A module that helps in modularizing Snapchat's story-like UI
 
+![Alt Text](https://media.giphy.com/media/Ypq9Urm6MVXiEQHfce/giphy.gif)
+
 * [Getting Started](#getting-started-)
 * [Features](#features-)
 * [Configure](#configure-)
