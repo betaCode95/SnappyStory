@@ -12,7 +12,10 @@ import android.widget.ImageView
 import android.widget.ProgressBar
 import android.widget.RelativeLayout
 import com.betacode.free.snappystory.R
+import com.betacode.free.snappystory.adapter.CommentsAdapter
+import com.betacode.free.snappystory.common.setup
 import com.betacode.free.snappystory.model.StoryModel
+import kotlinx.android.synthetic.main.view_comment.view.*
 import kotlinx.android.synthetic.main.view_snappy_story.view.*
 import kotlin.collections.ArrayList
 
@@ -29,6 +32,10 @@ class SnappyStoryView : RelativeLayout {
     private var timeFinished = 0L
     private var timer: CountDownTimer? = null
     private var listener: SnappyStoryListener? = null
+
+    private val commentsAdapter by lazy {
+        CommentsAdapter()
+    }
 
     constructor(context: Context?) : super(context) {
         init(context)
@@ -66,6 +73,7 @@ class SnappyStoryView : RelativeLayout {
 
     private fun next(storyModel: StoryModel) {
         currentStory = storyModel
+        showComments()
         loadImage()
     }
 
@@ -94,7 +102,7 @@ class SnappyStoryView : RelativeLayout {
                 currentStoryIndex++
                 next(stories[currentStoryIndex])
             } else {
-               listener?.onAllFinished()
+                listener?.onAllFinished()
             }
         }
 
@@ -110,7 +118,10 @@ class SnappyStoryView : RelativeLayout {
 
     // Public Functions
 
-    fun load(stories: ArrayList<StoryModel> = arrayListOf(), listener: SnappyStoryListener? = null) {
+    fun load(
+        stories: ArrayList<StoryModel> = arrayListOf(),
+        listener: SnappyStoryListener? = null
+    ) {
         val inflater =
             mContext?.getSystemService(Context.LAYOUT_INFLATER_SERVICE) as? LayoutInflater
         progress_counter.removeAllViews()
@@ -147,6 +158,29 @@ class SnappyStoryView : RelativeLayout {
                     currentStoryIndex--
                     next(this.stories[currentStoryIndex])
                 }
+            }
+        }
+    }
+
+    private fun showComments() {
+        comment_recycler.visibility = View.GONE
+        comments.text = "Show Comments"
+        comment_recycler.setup(commentsAdapter, currentStory?.comments)
+        if (currentStory?.comments?.isEmpty() == true) {
+            comments.visibility = View.GONE
+        } else {
+            comments.visibility = View.VISIBLE
+        }
+        comments.setOnClickListener {
+            if (comment_recycler.visibility == View.VISIBLE) {
+                comment_recycler.visibility = View.GONE
+                comments.text = "Show Comments"
+                timer = getTimer(timeRemaining)
+                timer?.start()
+            } else {
+                comment_recycler.visibility = View.VISIBLE
+                comments.text = "Hide Comments"
+                timer?.cancel()
             }
         }
     }

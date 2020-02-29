@@ -1,7 +1,7 @@
 apply plugin: 'maven-publish'
 apply plugin: 'com.jfrog.bintray'
 
-version '0.1' // your library version
+version '0.2' // your library version
 group 'com.betacode' // whatever group name you'd like
 
 publishing {
