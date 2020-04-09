@@ -1,10 +1,10 @@
 
 
-# SnappyStory [DUMMY APP HERE](https://drive.google.com/open?id=1v7tAk9Od8O8QvfKaEYlSmT5lHkLB4r1v)
+# SnappyStory
 
 ![Build Status](https://travis-ci.org/ChuckerTeam/chucker.svg?branch=master) ![License](https://img.shields.io/github/license/ChuckerTeam/Chucker.svg) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-orange.svg)](http://makeapullrequest.com)
 
-A module that helps in modularizing Snapchat's story-like UI. [DUMMY APP HERE](https://drive.google.com/open?id=1v7tAk9Od8O8QvfKaEYlSmT5lHkLB4r1v)
+A module that helps in modularizing Snapchat's story-like UI. [Demo](https://drive.google.com/open?id=1v7tAk9Od8O8QvfKaEYlSmT5lHkLB4r1v)
 
 
 ![Alt Text](https://media.giphy.com/media/cjtrs2gbteYwxFs8cv/giphy.gif)
